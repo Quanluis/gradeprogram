@@ -13,14 +13,17 @@ int main(){
      D = 60,
      C = 70,
      B = 80,
-     A = 90;
+     A = 90,
+     min = 0,
+     max = 100;
 
     // I/O 
 
     cout << "What is your grade? ";
     cin >> grade ;
-    
-    if(grade >= A){
+
+    if((grade >= min) && (grade <= max)){
+        if(grade >= A){
         cout << "You got a A";
     } else if (grade >= B) {
         cout << "You got a B";
@@ -32,6 +35,9 @@ int main(){
         cout << "You got a F";
     } else if (grade < F){
         cout << "You got a F";
+    }
+    } else {
+        cout << "You cannot enter less than 0 and more than 100.";
     }
    
     return 0;
